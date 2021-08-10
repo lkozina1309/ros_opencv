@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(iq_vision)
+project(ros_opencv)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -122,7 +122,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/iq_vision.cpp
+#   src/${PROJECT_NAME}/iq_opencv.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -205,12 +205,8 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(canny_edge_sol src/canny_edge_sol.cpp)
-target_link_libraries(canny_edge_sol ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
 
-add_executable(canny_edge src/canny_edge.cpp)
-target_link_libraries(canny_edge ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
 
-catkin_install_python(PROGRAMS src/web_camera_stream.py src/canny_edge.py src/camera_stream.py src/camera_gray.py
+catkin_install_python(PROGRAMS src/canny_edge.py src/camera_stream.py src/camera_gray.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
