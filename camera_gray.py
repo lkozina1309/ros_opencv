@@ -1,3 +1,5 @@
+# Script camera_gray.py is used to watch stream from drone camera and convert it to see gray image. It can be used for any other vehicle that uses Robotic Operating System and has camera on it.
+
 import cv2
 from cv_bridge import CvBridge
 import rospy
