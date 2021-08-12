@@ -207,6 +207,6 @@ include_directories(
 
 
 
-catkin_install_python(PROGRAMS src/canny_edge.py src/camera_stream.py src/camera_gray.py
+catkin_install_python(PROGRAMS src/canny_edge.py src/camera_stream.py src/camera_gray.py src/circle_detection.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
