@@ -1,4 +1,6 @@
-import cv2
+# Script circle_detection.py is used to detect circles on camera video stream. You can change parameters in line 15 if you want them to be different.
+
+import cv2 
 from cv_bridge import CvBridge
 import rospy
 from sensor_msgs.msg import Image
@@ -10,7 +12,7 @@ def callback(data):
 	current_frame = br.imgmsg_to_cv2(data)
 	gray = cv2.cvtColor(current_frame, cv2.COLOR_BGR2GRAY)
 	gray = cv2.medianBlur(gray, 5)
-	circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 20, param1=100, param2=30, minRadius=0, maxRadius=0)
+	circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 20, param1=80, param2=40, minRadius=0, maxRadius=0)
 	detected_circles = np.uint16(np.around(circles))
 	for (x,y,r) in detected_circles[0,:]:
 		cv2.circle(current_frame, (x,y), r, (0,255,0), 3)
