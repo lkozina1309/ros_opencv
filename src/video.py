@@ -1,3 +1,5 @@
+# Script video.py is used to create video from drone camera while watching the stream.
+
 import cv2
 from cv_bridge import CvBridge
 import rospy
