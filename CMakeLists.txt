@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
   std_msgs
+  rospy
+  numpy 
 )
 
 ## System dependencies are found with CMake's conventions
