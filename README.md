@@ -1,3 +1,3 @@
-# ROS_OPENCV
+# ros_opencv
 
-ROS_OPENCV is a package for drone camera using ROSPY and OpenCV.
+ros_opencv is a package for drone camera using ROSPY and OpenCV.
